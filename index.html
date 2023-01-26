@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Arthur Mousinho</title>
+    
+    <!-- Links css -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+
+    <!-- https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./assets/logo.svg" alt="Arthur Mousinho's logo">
+        </a>
+
+        <ul>
+            <li>
+                <a href="https://github.com/arthurmousinho" target="_blank">GitHub</a>
+            </li>
+
+            <li>
+                <a href="https://linkedin.com/in/arthurmousinho" target="_blank">Linkedin</a>
+            </li>
+
+            <li>
+                <a onclick="changeTheme()">Trocar de tema</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="cards-container">
+            
+        </div>
+    </main>
+
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div>
+                <a class="close-modal">
+                    <img src="./assets/close-modal-icon.svg" alt="close modal icon" onclick="Modal.closeModal()">
+                </a>
+            </div>
+    </div>
+
+
+    <script src="./src/main.js"></script>
+    <script src="./src/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --header-bg-color: #29292E;
+    --header-font-color: rgba(255, 255, 255, 0.542);
+    --header-font-hover-color: #006FC8;
+    --body-bg: black;
+    --heading-color: white;
+    --placeholder-color: rgba(255, 255, 255, 0.542);
+    --card-hover-color: #29292eab;
+}
+
+.light {
+    --header-bg-color: white;
+    --header-font-color: #29292E;
+    --header-font-hover-color: #0085FF;
+    --body-bg: #0085FF;
+    --heading-color: black;
+    --placeholder-color: rgb(0, 0, 0);
+    --card-hover-color: #ffffffeab;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+header {
+    padding: 0.5rem 0rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--header-bg-color);
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header li {
+    list-style: none;
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--header-font-color);
+}
+
+header a:hover, header li:hover {
+    color: var(--header-font-hover-color);
+}
+
+
+main {
+    padding-top: 2.5rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .cards-container {
+    margin-bottom: 10rem;
+    width: 90vw;
+    max-width: 1150px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .cards-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    position: relative;
+}
+
+main .cards-container div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main .cards-container div a {
+    color: var(--header-font-color);
+}
+
+main .cards-container div a:hover {
+    color: var(--header-font-hover-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+main .cards-container div .card-content {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .cards-container div .card-content h2 {
+    display: inline;
+    color: var(--heading-color);
+} 
+
+main .cards-container div .card-content p {
+    color: var(--placeholder-color);
+}
