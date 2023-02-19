@@ -6,6 +6,13 @@ const Data = [
         moreInfo: "Desenvolvi esse projeto juntamente com meu amigo Vinícios D' Fátima durante a disciplina de Linguagem de Programação II, no qual utilizamos a biblioteca customTkinter para construir a interface gráfica e praticamos conceitos de programação orientada a objetos com Python."
     },
     {
+        title: 'Boleto Fácil',
+        cover: './assets/covers/boletofacil.jpg',
+        description: 'É uma aplicação web que ajuda os usuários a monitorar seus gastos, como boletos, faturas e outras contas, usando o armazenamento local do navegador.',
+        moreInfo: "Um dos projetos mais desafiadores que já fiz, mas aprendi bastante sobre JavaScript, HTML e CSS. Me inspirei no projeto DevFinance da Maratona Discover da Rocketseat, porém adaptei o layout ao meu estilo, implementando uma barra lateral responsiva e um menu para dispositivos móveis.",
+        url: 'https://github.com/arthurmousinho/boleto_facil'
+    },
+    {
         title: 'Tasks.Js',
         cover: './assets/covers/tasksjs.jpg',
         description: 'Aplicação web de uma lista de tarefas com armazenamento em LocalStorage com um timer para aplicar a técnica de Pomodoro.',
