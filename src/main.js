@@ -13,6 +13,13 @@ const Data = [
         url: 'https://github.com/arthurmousinho/boleto_facil'
     },
     {
+        title: 'Dev Burger',
+        cover: './assets/covers/dev-burger.jpg',
+        description: 'Aplicação web que simula um sistema de uma hamburgueria com tema de programação, com página de cardápio e meu pedido',
+        moreInfo: "Esse foi meu primeiro projeto com mais de uma página, desenvolvi a página de cardápio e a página de com os itens que o usuário escolheu.",
+        url: 'https://github.com/arthurmousinho/dev-burger'
+    },
+    {
         title: 'Tasks.Js',
         cover: './assets/covers/tasksjs.jpg',
         description: 'Aplicação web de uma lista de tarefas com armazenamento em LocalStorage com um timer para aplicar a técnica de Pomodoro.',
