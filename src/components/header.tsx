@@ -7,7 +7,7 @@ export function Header() {
     return (
         <Card className="px-4 py-3">
             <CardHeader className="p-0 flex flex-row justify-between items-center">
-                <div className="bg-blue-500 text-slate-50 rounded-md p-2 w-min">
+                <div className="bg-primary text-slate-50 rounded-md p-2 w-min">
                     <Braces />
                 </div>
                 <nav className="flex flex-row gap-6 items-center">

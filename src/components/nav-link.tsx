@@ -19,10 +19,10 @@ export function NavLink(props: NavLinKProps) {
                 font-medium
                 text-sm
                 text-muted-foreground
-                data-[current=true]:text-blue-500 
+                data-[current=true]:text-primary
                 data-[current=true]:underline
                 data-[current=true]:underline-offset-8
-                data-[current=true]:decoration-blue-500
+                data-[current=true]:decoration-primary
             "
         />
     )
