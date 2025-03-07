@@ -1,9 +1,7 @@
-"use client"
-
-import { Card, CardHeader } from "@/components/ui/card"
-import { Braces, Sun } from "lucide-react"
-import { NavLink } from "./nav-link"
-import { Button } from "@/components/ui/button"
+import { Card, CardHeader } from "@/components/ui/card";
+import { Braces, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NavLink } from "./nav-link";
 
 export function Header() {
     return (
