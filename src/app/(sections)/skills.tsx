@@ -1,5 +1,11 @@
-import { backEndTools, databaseTools, frontEndTools, otherTools, programmingLanguages } from "./language-badge";
-import { SkillSection } from "./skill-section";
+import { 
+    backEndTools, 
+    databaseTools, 
+    frontEndTools, 
+    otherTools, 
+    programmingLanguages 
+} from "../../components/language-badge";
+import { SkillSection } from "../../components/skill-section";
 
 export function Skills() {
     return (

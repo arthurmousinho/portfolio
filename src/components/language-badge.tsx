@@ -1,29 +1,29 @@
 import Image from "next/image";
 
-import JavaScript from '@/assets/javascript.svg';
-import TypeScript from '@/assets/typescript.svg';
-import Python from '@/assets/python.svg';
-import Java from '@/assets/java.svg';
-import HTML from '@/assets/html.svg';
-import CSS from '@/assets/css.svg';
-import React from '@/assets/react.svg';
-import Next from '@/assets/next.svg';
-import Angular from '@/assets/angular.svg';
-import Tailwind from '@/assets/tailwindcss.svg';
-import Expo from '@/assets/expo.svg';
-import Node from '@/assets/node.svg';
-import Express from '@/assets/express.svg';
-import Fastify from '@/assets/fastify.svg';
-import Nest from '@/assets/nest.svg';
-import PostgreSQL from '@/assets/postgresql.svg';
-import Prisma from '@/assets/prisma.svg';
-import Drizzle from '@/assets/drizzle.svg';
-import Vercel from '@/assets/vercel.svg';
-import Git from '@/assets/git.svg';
-import Docker from '@/assets/docker.svg';
-import Firebase from '@/assets/firebase.svg';
-import GraphQL from '@/assets/graphql.svg';
-import Vite from '@/assets/vite.svg';
+import JavaScript from '@/assets/techs/javascript.svg';
+import TypeScript from '@/assets/techs/typescript.svg';
+import Python from '@/assets/techs/python.svg';
+import Java from '@/assets/techs/java.svg';
+import HTML from '@/assets/techs/html.svg';
+import CSS from '@/assets/techs/css.svg';
+import React from '@/assets/techs/react.svg';
+import Next from '@/assets/techs/next.svg';
+import Angular from '@/assets/techs/angular.svg';
+import Tailwind from '@/assets/techs/tailwindcss.svg';
+import Expo from '@/assets/techs/expo.svg';
+import Node from '@/assets/techs/node.svg';
+import Express from '@/assets/techs/express.svg';
+import Fastify from '@/assets/techs/fastify.svg';
+import Nest from '@/assets/techs/nest.svg';
+import PostgreSQL from '@/assets/techs/postgresql.svg';
+import Prisma from '@/assets/techs/prisma.svg';
+import Drizzle from '@/assets/techs/drizzle.svg';
+import Vercel from '@/assets/techs/vercel.svg';
+import Git from '@/assets/techs/git.svg';
+import Docker from '@/assets/techs/docker.svg';
+import Firebase from '@/assets/techs/firebase.svg';
+import GraphQL from '@/assets/techs/graphql.svg';
+import Vite from '@/assets/techs/vite.svg';
 import { Badge } from "./ui/badge";
 
 export type ProgrammingLanguage = 'JavaScript' | 'TypeScript' | 'Python' | 'Java';
@@ -117,6 +117,7 @@ export function LanguageBadge({ language }: LanguageBadgeProps) {
                 alt={language}
                 width={15}
                 height={15}
+                className="size-[15]"
             />
             <span>{language}</span>
         </Badge>
