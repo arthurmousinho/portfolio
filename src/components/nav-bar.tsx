@@ -7,7 +7,7 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BriefcaseBusiness, Code, Github, Home, Linkedin } from "lucide-react";
+import { BriefcaseBusiness, Code, Github, GraduationCap, Home, Linkedin } from "lucide-react";
 
 const navigationOptions = [
     {
@@ -21,6 +21,10 @@ const navigationOptions = [
     {
         icon: <Code size={16} />,
         label: "Projects"
+    },
+    {
+        icon: <GraduationCap size={16} />,
+        label: "Education"
     }
 ]
 
