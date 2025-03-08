@@ -5,6 +5,7 @@ import { Projects } from "./(sections)/projects";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import { Education } from "./(sections)/education";
+import { Contact } from "./(sections)/contact";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Experiences />
       <Projects />
       <Education />
+      <Contact />
     </div>
   )
 }
