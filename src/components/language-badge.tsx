@@ -22,7 +22,7 @@ import Vercel from '@/assets/techs/vercel.svg';
 import Git from '@/assets/techs/git.svg';
 import Docker from '@/assets/techs/docker.svg';
 import Firebase from '@/assets/techs/firebase.svg';
-import GraphQL from '@/assets/techs/graphql.svg';
+import Jest from '@/assets/techs/jest.svg';
 import Vite from '@/assets/techs/vite.svg';
 import { Badge } from "./ui/badge";
 
@@ -31,7 +31,7 @@ export type FrontEndTool = 'HTML' | 'CSS' | 'React' | 'Next' | 'Angular' | 'Tail
 export type MobileTool = 'React Native' | 'Expo';
 export type BackEndTool = 'Node' | 'Express' | 'Fastify' | 'Nest';
 export type DatabaseTool = 'PostgreSQL' | 'Prisma' | 'Drizzle'
-export type OtherTool = 'Vercel' | 'Git' | 'Docker' | 'Firebase' | 'GraphQL' | 'Vite';
+export type OtherTool = 'Vercel' | 'Git' | 'Docker' | 'Firebase' | 'Jest' | 'Vite';
 
 type LanguageBadgeProps = {
     language:
@@ -77,7 +77,7 @@ export const otherTools: OtherTool[] = [
     'Docker',
     'Firebase',
     'Vercel',
-    'GraphQL',
+    'Jest',
     'Vite'
 ]
 
@@ -104,7 +104,7 @@ const iconMap = {
     Git,
     Docker,
     Firebase,
-    GraphQL,
+    Jest,
     Vite,
     'React Native': React
 };
