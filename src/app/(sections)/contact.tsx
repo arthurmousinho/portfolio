@@ -4,7 +4,6 @@ import { SectionWrapper } from "@/components/section-wrapper";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
@@ -16,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
-import { CheckIcon, ChevronRightIcon, Mail, Timer } from "lucide-react";
+import { CheckIcon, ChevronRightIcon } from "lucide-react";
 
 const formSchema = z.object({
     name: z
