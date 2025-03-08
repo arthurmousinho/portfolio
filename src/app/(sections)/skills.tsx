@@ -1,18 +1,16 @@
-import { 
-    backEndTools, 
-    databaseTools, 
-    frontEndTools, 
-    otherTools, 
-    programmingLanguages 
+import { SectionWrapper } from "@/components/section-wrapper";
+import {
+    backEndTools,
+    databaseTools,
+    frontEndTools,
+    otherTools,
+    programmingLanguages
 } from "../../components/language-badge";
 import { SkillSection } from "../../components/skill-section";
 
 export function Skills() {
     return (
-        <section className="space-y-4">
-            <h2 className="font-medium text-gray-800 dark:text-neutral-200">
-                Skills
-            </h2>
+        <SectionWrapper title="Skills">
             <ul className="space-y-4">
                 <SkillSection
                     label="Languages"
@@ -35,6 +33,6 @@ export function Skills() {
                     items={otherTools}
                 />
             </ul>
-        </section>
+        </SectionWrapper>
     )
 }
