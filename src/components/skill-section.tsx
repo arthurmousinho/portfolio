@@ -1,20 +1,16 @@
 import {
-    LanguageBadge,
-    type BackEndTool,
-    type DatabaseTool,
-    type FrontEndTool,
-    type OtherTool,
-    type ProgrammingLanguage
-} from "./language-badge";
+    ToolBadge,
+    type Tool
+} from "./tool-badge";
 
 type SkillSectionProps = {
     label: string;
-    items: ProgrammingLanguage[] | FrontEndTool[] | BackEndTool[] | DatabaseTool[] | OtherTool[];
+    tools: Tool[];
 }
 
 export function SkillSection({
     label,
-    items
+    tools
 }: SkillSectionProps) {
     return (
         <li className="flex items-center space-x-2 font-medium">
@@ -22,8 +18,8 @@ export function SkillSection({
                 {label}:
             </span>
             <div className="space-x-2">
-                {items.map((language) => (
-                    <LanguageBadge key={language} language={language} />
+                {tools.map((language) => (
+                    <ToolBadge key={language} tool={language} />
                 ))}
             </div>
         </li>

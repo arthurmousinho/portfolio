@@ -5,7 +5,8 @@ import {
     frontEndTools,
     otherTools,
     programmingLanguages
-} from "../../components/language-badge";
+} from "../../components/tool-badge";
+
 import { SkillSection } from "../../components/skill-section";
 
 export function Skills() {
@@ -14,23 +15,23 @@ export function Skills() {
             <ul className="space-y-4">
                 <SkillSection
                     label="Languages"
-                    items={programmingLanguages}
+                    tools={programmingLanguages}
                 />
                 <SkillSection
                     label="Front-end"
-                    items={frontEndTools}
+                    tools={frontEndTools}
                 />
                 <SkillSection
                     label="Back-end"
-                    items={backEndTools}
+                    tools={backEndTools}
                 />
                 <SkillSection
                     label="Database"
-                    items={databaseTools}
+                    tools={databaseTools}
                 />
                 <SkillSection
                     label="Others"
-                    items={otherTools}
+                    tools={otherTools}
                 />
             </ul>
         </SectionWrapper>

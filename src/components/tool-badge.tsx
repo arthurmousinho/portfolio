@@ -33,15 +33,6 @@ export type BackEndTool = 'Node' | 'Express' | 'Fastify' | 'Nest';
 export type DatabaseTool = 'PostgreSQL' | 'Prisma' | 'Drizzle'
 export type OtherTool = 'Vercel' | 'Git' | 'Docker' | 'Firebase' | 'Jest' | 'Vite';
 
-type LanguageBadgeProps = {
-    language:
-    ProgrammingLanguage |
-    FrontEndTool |
-    MobileTool |
-    BackEndTool |
-    DatabaseTool |
-    OtherTool
-}
 
 export const programmingLanguages: ProgrammingLanguage[] = [
     "JavaScript",
@@ -109,17 +100,19 @@ const iconMap = {
     'React Native': React
 };
 
-export function LanguageBadge({ language }: LanguageBadgeProps) {
+export type Tool = ProgrammingLanguage | FrontEndTool | BackEndTool | DatabaseTool | OtherTool;
+
+export function ToolBadge({ tool }: { tool: Tool }) {
     return (
         <Badge variant="secondary" className="text-xs text-muted-foreground space-x-1">
             <Image
-                src={iconMap[language]}
-                alt={language}
+                src={iconMap[tool]}
+                alt={tool}
                 width={15}
                 height={15}
                 className="size-[15]"
             />
-            <span>{language}</span>
+            <span>{tool}</span>
         </Badge>
     )
 }
