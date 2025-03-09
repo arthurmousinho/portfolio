@@ -1,4 +1,3 @@
-import { Express } from "@/components/techs/express";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Github, Linkedin, Mail } from "lucide-react";
 
@@ -13,7 +12,6 @@ export function Hero() {
                         alt="Arthur Mousinho"
                     />
                 </Avatar>
-                <Express />
                 <div>
                     <h1 className="text-lg font-medium text-gra-600 dark:text-neutral-200">
                         Arthur Mousinho
