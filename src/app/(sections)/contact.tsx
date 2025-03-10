@@ -56,7 +56,7 @@ export function Contact() {
     }
 
     return (
-        <SectionWrapper title="Contact">
+        <SectionWrapper title="Contact" id="contact-section">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
                     <FormField

@@ -11,7 +11,7 @@ import klabLogo from "@/assets/logos/klab-logo.svg";
 
 export function Experiences() {
     return (
-        <SectionWrapper title="Experiences">
+        <SectionWrapper title="Experiences" id="experiences-section">
             <Timeline>
                 <TimelineItem
                     icon={<Image src={icevLogo} alt="somosicev" className="rounded-full" />}

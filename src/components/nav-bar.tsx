@@ -1,3 +1,5 @@
+'use client'
+
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
@@ -7,28 +9,35 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BriefcaseBusiness, Code, GraduationCap, Home } from "lucide-react";
+import { scrollToSection } from "@/helpers/scroll-to-section";
+import { BriefcaseBusiness, Code, GraduationCap, Home, Send } from "lucide-react";
 
 const navigationOptions = [
     {
         icon: <Home size={16} />,
         label: "Home",
-        href: "home-breakpoint",
+        id: "hero-section"
     },
     {
         icon: <BriefcaseBusiness size={16} />,
         label: "Works",
-        href: "works-breakpoint",
+        id: "experiences-section"
     },
     {
         icon: <Code size={16} />,
         label: "Projects",
-        href: "projects-breakpoint"
+        id: "projects-section"
     },
     {
         icon: <GraduationCap size={16} />,
+
         label: "Education",
-        href: "education-breakpoint"
+        id: "education-section"
+    },
+    {
+        icon: <Send size={16} />,
+        label: "Contact",
+        id: "contact-section"
     }
 ];
 
@@ -40,7 +49,7 @@ export function Navbar() {
                 direction="vertical"
             >
                 {navigationOptions.map((option, index) => (
-                    <DockIcon key={index}>
+                    <DockIcon key={index} onClick={() => scrollToSection(option.id)}>
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Button variant="ghost" type="button" size="icon">

@@ -1,9 +1,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Paperclip } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="space-y-6">
+        <section className="space-y-6" id="hero-section">
             <header className="flex items-center gap-4">
                 <Avatar className="size-16">
                     <AvatarFallback>AM</AvatarFallback>
@@ -41,6 +41,10 @@ export function Hero() {
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Linkedin size={16} />
                     <a href="mailto:">arthurmousinho</a>
+                </div>
+                <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
+                    <Paperclip size={16} />
+                    <a href="mailto:">Resume</a>
                 </div>
             </footer>
         </section >

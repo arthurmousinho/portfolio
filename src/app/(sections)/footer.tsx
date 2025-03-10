@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
@@ -6,6 +8,7 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { scrollToSection } from "@/helpers/scroll-to-section";
 
 const footerLinks = [
     {
@@ -48,7 +51,12 @@ export function Footer() {
                     ))}
                     <Tooltip>
                         <TooltipTrigger asChild>
-                            <Button variant="outline" size="sm" className="rounded-full text-muted-foreground">
+                            <Button 
+                                variant="outline" 
+                                size="sm" 
+                                className="rounded-full text-muted-foreground"
+                                onClick={() => scrollToSection("hero-section")}
+                            >
                                 <ArrowUp size={16} />
                             </Button>
                         </TooltipTrigger>

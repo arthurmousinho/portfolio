@@ -6,7 +6,7 @@ import image2 from "@/assets/project-klab.jpeg";
 
 export function Projects() {
     return (
-        <SectionWrapper title="Projects">
+        <SectionWrapper title="Projects" id="projects-section">
             <main className="flex flex-col gap-2">
                 <ProjectCard
                     title="Project 1"
