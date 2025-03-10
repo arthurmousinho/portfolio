@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/nav-bar";
 import { Providers } from "./providers";
 import { DottedBackground } from "@/components/dotted-background";
+import { BottomBlur } from "@/components/bottom-blur";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +33,8 @@ export default function RootLayout({
         <Providers>
           <DottedBackground />
           {children}
-          <Navbar />
         </Providers>
+        <BottomBlur />
       </body>
     </html>
   );

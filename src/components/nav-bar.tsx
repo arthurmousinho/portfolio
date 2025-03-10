@@ -7,53 +7,53 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BriefcaseBusiness, Code, Github, GraduationCap, Home, Linkedin } from "lucide-react";
+import { BriefcaseBusiness, Code, GraduationCap, Home } from "lucide-react";
 
 const navigationOptions = [
     {
         icon: <Home size={16} />,
-        label: "Home"
+        label: "Home",
+        href: "home-breakpoint",
     },
     {
         icon: <BriefcaseBusiness size={16} />,
-        label: "Works"
+        label: "Works",
+        href: "works-breakpoint",
     },
     {
         icon: <Code size={16} />,
-        label: "Projects"
+        label: "Projects",
+        href: "projects-breakpoint"
     },
     {
         icon: <GraduationCap size={16} />,
-        label: "Education"
+        label: "Education",
+        href: "education-breakpoint"
     }
-]
+];
 
-export default function Navbar() {
+export function Navbar() {
     return (
-        <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-            <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-            <Dock 
-                className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        <div className="my-auto flex h-auto max-w-14">
+            <Dock
+                className="flex flex-col min-w-full w-full items-center py-2 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+                direction="vertical"
             >
                 {navigationOptions.map((option, index) => (
                     <DockIcon key={index}>
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    type="button"
-                                    size="icon"
-                                >
+                                <Button variant="ghost" type="button" size="icon">
                                     {option.icon}
                                 </Button>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent side="right">
                                 <p>{option.label}</p>
                             </TooltipContent>
                         </Tooltip>
                     </DockIcon>
                 ))}
-                <Separator orientation="vertical" className="h-full py-2" />
+                <Separator orientation="horizontal" className="w-full px-2" />
                 <DockIcon>
                     <Tooltip>
                         <TooltipTrigger asChild>
