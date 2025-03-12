@@ -1,13 +1,41 @@
 import { SectionWrapper } from "@/components/section-wrapper";
-import {
-    backEndTools,
-    databaseTools,
-    frontEndTools,
-    otherTools,
-    programmingLanguages
-} from "../../components/tool-badge";
-
 import { SkillSection } from "../../components/skill-section";
+import type { Tool } from "@/components/tool-badge";
+
+const programmingLanguages = [
+    'javascript',
+    'typescript',
+    'python',
+    'java'
+] as Tool[]
+
+const frontEndTools = [
+    'html',
+    'css',
+    'react',
+    'angular',
+    'tailwind'
+] as Tool[]
+
+const backEndTools = [
+    'node',
+    'express',
+    'fastify',
+    'nest'
+] as Tool[]
+
+const databaseTools = [
+    'postgresql',
+    'prisma',
+    'drizzle'
+] as Tool[]
+
+const otherTools = [
+    'jest',
+    'vercel',
+    'docker',
+    'firebase',
+] as Tool[]
 
 export function Skills() {
     return (

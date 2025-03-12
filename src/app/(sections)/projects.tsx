@@ -1,34 +1,24 @@
 import { ProjectCard } from "@/components/project-card";
 import { SectionWrapper } from "@/components/section-wrapper";
+import { getProjects } from "@/graphql/get-projects";
 
-import image1 from "@/assets/project-dimmy.jpeg";
-import image2 from "@/assets/project-klab.jpeg";
+export async function Projects() {
 
-export function Projects() {
+    const { data } = await getProjects();
+
     return (
         <SectionWrapper title="Projects" id="projects-section">
             <main className="flex flex-col gap-2">
-                <ProjectCard
-                    title="Project 1"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-                    category="WORK"
-                    imageUrl={image1.src}
-                    tools={["TypeScript", "React", "Vite", "Tailwind"]}
-                />
-                <ProjectCard
-                    title="Project 2"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-                    category="WORK"
-                    imageUrl={image2.src}
-                    tools={["TypeScript", "React", "Vite", "Tailwind", "Nest", "Prisma", "Docker", "PostgreSQL", "Jest"]}
-                />
-                <ProjectCard
-                    title="Project 3"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-                    category="WORK"
-                    imageUrl={image1.src}
-                    tools={["TypeScript", "Next", "Tailwind"]}
-                />
+                {data.projects.map(project => (
+                    <ProjectCard
+                        key={project.id}
+                        title={project.title}
+                        description={project.description}
+                        category={project.category}
+                        imageUrl={project.image.url}
+                        tools={project.techs}
+                    />
+                ))}
             </main>
         </SectionWrapper>
     )

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
     Card,
     CardContent,
@@ -8,14 +7,15 @@ import {
 } from "@/components/ui/card";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { ToolBadge, type Tool } from "./tool-badge";
+import { Safari } from "./magicui/safari";
 
-type ProjectCategory = 'WORK' | 'STUDY';
+type ProjectCategory = 'work' | 'study';
 
 export function ProjectCategory({ category }: { category: ProjectCategory }) {
     return (
         <div className="flex items-center gap-1 text-muted-foreground text-xs">
-            {category === 'WORK' && <BriefcaseBusiness size={15} />}
-            {category === 'STUDY' && <GraduationCap size={15} />}
+            {category === 'work' && <BriefcaseBusiness size={15} />}
+            {category === 'study' && <GraduationCap size={15} />}
             <span>Work</span>
         </div>
     )
@@ -38,12 +38,11 @@ export function ProjectCard({
 }: ProjectCardProps) {
     return (
         <Card className="p-0 flex flex-row gap-0">
-            <CardHeader className="p-0 m-0 min-w-[40%] min-h-[200px] relative">
-                <Image
-                    src={imageUrl}
-                    fill
-                    alt="Arthur Mousinho"
-                    className="rounded-l-xl object-cover"
+            <CardHeader className="p-0 m-0 max-w-[40%] min-h-full">
+                <Safari
+                    url={'adasdasdada'}
+                    className="size-full rounded-l-xl min-h-full"
+                    imageSrc={imageUrl}
                 />
             </CardHeader>
             <CardContent className="flex flex-col gap-3 justify-between p-4">

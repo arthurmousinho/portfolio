@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Badge } from "./ui/badge";
 
 import { Javascript } from "./techs/javascript";
@@ -27,155 +25,132 @@ import { Firebase } from "./techs/firebase";
 import { Jest } from "./techs/jest";
 import { Vite } from "./techs/vite";
 
-export type ProgrammingLanguage = 'JavaScript' | 'TypeScript' | 'Python' | 'Java';
-export type FrontEndTool = 'HTML' | 'CSS' | 'React' | 'Next' | 'Angular' | 'Tailwind';
-export type MobileTool = 'React Native' | 'Expo';
-export type BackEndTool = 'Node' | 'Express' | 'Fastify' | 'Nest';
-export type DatabaseTool = 'PostgreSQL' | 'Prisma' | 'Drizzle'
-export type OtherTool = 'Vercel' | 'Git' | 'Docker' | 'Firebase' | 'Jest' | 'Vite';
-
-export const programmingLanguages: ProgrammingLanguage[] = [
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Java",
-]
-
-export const frontEndTools: FrontEndTool[] = [
-    "HTML",
-    "CSS",
-    "React",
-    "Next",
-    "Angular",
-    "Tailwind",
-];
-
-export const backEndTools: BackEndTool[] = [
-    "Node",
-    "Express",
-    "Fastify",
-    "Nest",
-];
-
-export const databaseTools: DatabaseTool[] = [
-    "PostgreSQL",
-    "Prisma",
-    "Drizzle",
-];
-
-export const otherTools: OtherTool[] = [
-    'Git',
-    'Docker',
-    'Firebase',
-    'Vercel',
-    'Jest',
-    'Vite'
-]
-
 const iconMap = {
-    JavaScript: {
+    javascript: {
         icon: <Javascript />,
         label: 'JavaScript',
     },
-    TypeScript: {
+    typescript: {
         icon: <Typescript />,
         label: 'TypeScript',
     },
-    Python: {
+    python: {
         icon: <Python />,
         label: 'Python',
     },
-    Java: {
+    java: {
         icon: <Java />,
         label: 'Java',
     },
-    HTML: {
+    html: {
         icon: <HTML />,
         label: 'HTML',
     },
-    CSS: {
+    css: {
         icon: <CSS />,
         label: 'CSS',
     },
-    React: {
+    react: {
         icon: <React />,
         label: 'React',
     },
-    Next: {
+    next: {
         icon: <Next />,
         label: 'Next.js',
     },
-    Angular: {
+    angular: {
         icon: <Angular />,
         label: 'Angular',
     },
-    Tailwind: {
+    tailwind: {
         icon: <Tailwind />,
         label: 'Tailwind CSS',
     },
-    Expo: {
+    expo: {
         icon: <Expo />,
         label: 'Expo',
     },
-    Node: {
+    node: {
         icon: <Node />,
         label: 'Node.js',
     },
-    Express: {
+    express: {
         icon: <Express />,
         label: 'Express.js',
     },
-    Fastify: {
+    fastify: {
         icon: <Fastify />,
         label: 'Fastify',
     },
-    Nest: {
+    nest: {
         icon: <Nest />,
         label: 'Nest.js',
     },
-    PostgreSQL: {
+    postgresql: {
         icon: <PostgreSQL />,
         label: 'PostgreSQL',
     },
-    Prisma: {
+    prisma: {
         icon: <Prisma />,
         label: 'Prisma ORM',
     },
-    Drizzle: {
+    drizzle: {
         icon: <Drizzle />,
         label: 'Drizzle ORM',
     },
-    Vercel: {
+    vercel: {
         icon: <Vercel />,
         label: 'Vercel',
     },
-    Git: {
+    git: {
         icon: <Git />,
         label: 'Git',
     },
-    Docker: {
+    docker: {
         icon: <Docker />,
         label: 'Docker',
     },
-    Firebase: {
+    firebase: {
         icon: <Firebase />,
         label: 'Firebase',
     },
-    Jest: {
+    jest: {
         icon: <Jest />,
         label: 'Jest',
     },
-    Vite: {
+    vite: {
         icon: <Vite />,
         label: 'Vite',
     },
-    'React Native': {
+    reactNative: {
         icon: <React />,
         label: 'React Native',
     }
 };
 
-export type Tool = ProgrammingLanguage | FrontEndTool | BackEndTool | DatabaseTool | OtherTool;
+export type Tool = 'javascript'
+    | 'typescript'
+    | 'python'
+    | 'java'
+    | 'html'
+    | 'css'
+    | 'react'
+    | 'next'
+    | 'angular'
+    | 'tailwind'
+    | 'node'
+    | 'express'
+    | 'fastify'
+    | 'nest'
+    | 'prisma'
+    | 'drizzle'
+    | 'docker'
+    | 'postgresql'
+    | 'vite'
+    | 'jest'
+    | 'vercel'
+    | 'firebase'
+;
 
 export function ToolBadge({ tool }: { tool: Tool }) {
     return (
