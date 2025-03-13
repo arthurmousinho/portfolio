@@ -13,11 +13,11 @@ export function SkillSection({
     tools
 }: SkillSectionProps) {
     return (
-        <li className="flex items-center space-x-2 font-medium">
+        <li className="flex sm:flex-row flex-col sm:items-center items-start space-y-2 space-x-2 font-medium">
             <span className="text-sm text-gray-500 dark:text-neutral-500 w-[77px]">
                 {label}:
             </span>
-            <div className="space-x-2">
+            <div className="space-x-2 space-y-2">
                 {tools.map((language) => (
                     <ToolBadge key={language} tool={language} />
                 ))}

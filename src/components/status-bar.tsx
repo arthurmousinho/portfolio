@@ -37,7 +37,7 @@ export function StatusBar() {
     }, [])
 
     return (
-        <div className="flex flex-col justify-start items-start">
+        <div className="flex sm:flex-col flex-row justify-start sm:items-start items-center gap-2">
             <div className="flex items-center gap-1 text-muted-foreground">
                 {isCharging ? (
                     <BatteryCharging size={24} className={`${getBatteryColor()}`} />

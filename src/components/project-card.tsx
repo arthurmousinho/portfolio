@@ -9,7 +9,6 @@ import { ArrowUpRight, BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { ToolBadge, type Tool } from "./tool-badge";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import Link from "next/link";
 
 type ProjectCategory = 'work' | 'study';
 
@@ -18,7 +17,7 @@ export function ProjectCategory({ category }: { category: ProjectCategory }) {
         <div className="flex items-center gap-1 text-muted-foreground text-xs">
             {category === 'work' && <BriefcaseBusiness size={15} />}
             {category === 'study' && <GraduationCap size={15} />}
-            <span>Work</span>
+            <span>{category[0].toUpperCase() + category.slice(1)}</span>
         </div>
     )
 }
@@ -41,14 +40,14 @@ export function ProjectCard({
     url
 }: ProjectCardProps) {
     return (
-        <Card className="p-0 flex flex-row gap-0 group">
-            <CardHeader className="p-0 m-0 max-w-[40%] min-h-full relative">
+        <Card className="p-0 flex flex-col sm:flex-row gap-0 group">
+            <CardHeader className="p-0 m-0 min-w-[40%] min-h-full relative">
                 <Image
                     src={imageUrl}
                     alt={title}
                     width={500}
                     height={500}
-                    className="size-full rounded-l-xl min-h-full"
+                    className="size-full sm:rounded-l-xl sm:rounded-t-none rounded-t-xl min-h-full min-w-full"
                 />
                 <a href={url} target="_blank" rel="noreferrer"> 
                     <Button

@@ -4,7 +4,7 @@ import { SectionWrapper } from "@/components/section-wrapper";
 export function Education() {
     return (
         <SectionWrapper title="Education" id="education-section">
-            <main className="grid grid-cols-2 gap-2">
+            <main className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <EducationCard
                     title="Bachelor's degree in Software Engineering"
                     place="iCEV - Instituto de Ensino Superior"
