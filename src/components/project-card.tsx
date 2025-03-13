@@ -5,9 +5,11 @@ import {
     CardHeader,
     CardTitle
 } from "@/components/ui/card";
-import { BriefcaseBusiness, GraduationCap } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { ToolBadge, type Tool } from "./tool-badge";
-import { Safari } from "./magicui/safari";
+import Image from "next/image";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 type ProjectCategory = 'work' | 'study';
 
@@ -27,6 +29,7 @@ type ProjectCardProps = {
     category: ProjectCategory;
     imageUrl: string;
     tools: Tool[];
+    url: string;
 }
 
 export function ProjectCard({
@@ -34,16 +37,29 @@ export function ProjectCard({
     description,
     category,
     imageUrl,
-    tools
+    tools,
+    url
 }: ProjectCardProps) {
     return (
-        <Card className="p-0 flex flex-row gap-0">
-            <CardHeader className="p-0 m-0 max-w-[40%] min-h-full">
-                <Safari
-                    url={'adasdasdada'}
+        <Card className="p-0 flex flex-row gap-0 group">
+            <CardHeader className="p-0 m-0 max-w-[40%] min-h-full relative">
+                <Image
+                    src={imageUrl}
+                    alt={title}
+                    width={500}
+                    height={500}
                     className="size-full rounded-l-xl min-h-full"
-                    imageSrc={imageUrl}
                 />
+                <a href={url} target="_blank" rel="noreferrer"> 
+                    <Button
+                        className="absolute right-2 bottom-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                        size="sm"
+                        variant="secondary"
+                    >
+                        <ArrowUpRight size={15} />
+                        Access
+                    </Button>
+                </a>
             </CardHeader>
             <CardContent className="flex flex-col gap-3 justify-between p-4">
                 <div className="space-y-3">
@@ -51,7 +67,9 @@ export function ProjectCard({
                         <CardTitle>
                             {title}
                         </CardTitle>
-                        <ProjectCategory category={category} />
+                        <ProjectCategory 
+                            category={category} 
+                        />
                     </header>
                     <CardDescription className="text-sm leading-relaxed line-clamp-3">
                         {description}

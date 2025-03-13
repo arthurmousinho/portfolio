@@ -17,6 +17,7 @@ export async function Projects() {
                         category={project.category}
                         imageUrl={project.image.url}
                         tools={project.techs}
+                        url={project.url}
                     />
                 ))}
             </main>

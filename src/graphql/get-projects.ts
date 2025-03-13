@@ -46,18 +46,21 @@ interface GetProjectsResponse {
 const GET_PROJECTS_QUERY = gql`
     query getProjects {
         projects {
-        id,
-        title, 
-        url,
-        description,
-        image {
-            url
+            id,
+            title, 
+            url,
+            description,
+            image {
+                url
+            }
+            techs,
+            category
         }
-        techs,
-        category
     }
-}`
+`
 
 export async function getProjects() {
-    return await apolloClient.query<GetProjectsResponse>({ query: GET_PROJECTS_QUERY });
+    return await apolloClient.query<GetProjectsResponse>(
+        { query: GET_PROJECTS_QUERY },
+    );
 }
