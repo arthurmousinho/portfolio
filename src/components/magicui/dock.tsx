@@ -33,8 +33,8 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       iconDistance = DEFAULT_DISTANCE,
       direction = "middle",
       ...props
-    },
-    ref,
+    }: DockProps,
+    ref: React.ForwardedRef<HTMLDivElement>,
   ) => {
     const mouseX = useMotionValue(Number.POSITIVE_INFINITY)
     const mouseY = useMotionValue(Number.POSITIVE_INFINITY)
@@ -43,14 +43,13 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
           return React.cloneElement(child, {
-            ...child.props,
             mouseX: direction === "vertical" ? undefined : mouseX,
             mouseY: direction === "vertical" ? mouseY : undefined,
             size: iconSize,
             magnification: iconMagnification,
             distance: iconDistance,
             isVertical: direction === "vertical",
-          })
+          } as any)
         }
         return child
       })
@@ -81,8 +80,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
         {renderChildren()}
       </motion.div>
     )
-  },
-)
+  },)
 
 Dock.displayName = "Dock"
 

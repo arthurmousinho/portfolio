@@ -6,7 +6,6 @@ import {
 import { BriefcaseBusiness } from "lucide-react";
 import { SectionWrapper } from "@/components/section-wrapper";
 
-import icevLogo from "@/assets/logos/icev-logo.jpeg";
 import klabLogo from "@/assets/logos/klab-logo.svg";
 
 export function Experiences() {
@@ -14,7 +13,13 @@ export function Experiences() {
         <SectionWrapper title="Experiences" id="experiences-section">
             <Timeline>
                 <TimelineItem
-                    icon={<Image src={icevLogo} alt="somosicev" className="rounded-full" />}
+                    icon={<Image 
+                        src={'https://media.licdn.com/dms/image/v2/C4E0BAQEbbWArvARdRw/company-logo_100_100/company-logo_100_100/0/1654202656271/somosicev_logo?e=1749686400&v=beta&t=Yhxgl_YW-1YJW5Rp4IWXGks8nZi9-TctEkCKV5VqGxc'} 
+                        width={100}
+                        height={100}
+                        alt="somosicev"
+                        className="rounded-full"
+                    />}
                     dateRange="iCEV - Instituto de Ensino Superior • Mar 2025 - Present"
                     title="Undergraduate Teaching Assistant"
                     description="Undergraduate Teaching Assistant in the Bachelor's Degree in Software Engineering for the Requirements and Software Modeling course"
