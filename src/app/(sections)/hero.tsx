@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Paperclip } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="space-y-6" id="hero-section">
+        <section className="space-y-6">
             <header className="flex sm:flex-row flex-col justify-between sm:items-center items-start gap-4">
                 <div className="flex items-center gap-4">
                     <Avatar className="size-16">

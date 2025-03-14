@@ -1,6 +1,9 @@
-import { ProjectCard } from "@/components/project-card";
+import { ProjectCard } from "../projects/project-card";
 import { SectionWrapper } from "@/components/section-wrapper";
+import { Button } from "@/components/ui/button";
 import { getProjects } from "@/graphql/get-projects";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export async function Projects() {
 
@@ -21,6 +24,14 @@ export async function Projects() {
                     />
                 ))}
             </main>
+            <footer className="flex justify-end">
+                <Link href="/projects">
+                    <Button size="sm" variant="outline">
+                        See all projects
+                        <ChevronRight />
+                    </Button>
+                </Link>
+            </footer>
         </SectionWrapper>
     )
 }

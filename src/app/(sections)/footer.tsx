@@ -31,7 +31,7 @@ const footerLinks = [
 export function Footer() {
     return (
         <>
-            <Separator className="mb-4" />
+            <Separator className="my-10" />
             <footer className="flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">
                     &copy; {new Date().getFullYear()} arthurmousinho
@@ -55,7 +55,7 @@ export function Footer() {
                                 variant="outline" 
                                 size="sm" 
                                 className="rounded-full text-muted-foreground"
-                                onClick={() => scrollToSection("hero-section")}
+                                onClick={() => scrollToSection("top-section")}
                             >
                                 <ArrowUp size={16} />
                             </Button>

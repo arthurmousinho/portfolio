@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { DottedBackground } from "@/components/dotted-background";
 import { BottomBlur } from "@/components/bottom-blur";
+import { Footer } from "./(sections)/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable} ${geistMono.variable} antialiased
+          w-[90vw] max-w-[670px] mx-auto mt-10  mb-[100px]
+        `}
       >
         <Providers>
           <DottedBackground />
           {children}
+          <Footer />
         </Providers>
         <BottomBlur />
       </body>

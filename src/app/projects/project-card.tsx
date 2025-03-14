@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
     Card,
     CardContent,
@@ -6,9 +7,8 @@ import {
     CardTitle
 } from "@/components/ui/card";
 import { ArrowUpRight, BriefcaseBusiness, GraduationCap } from "lucide-react";
-import { ToolBadge, type Tool } from "./tool-badge";
-import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { ToolBadge, type Tool } from "@/components/tool-badge";
 
 type ProjectCategory = 'work' | 'study';
 
