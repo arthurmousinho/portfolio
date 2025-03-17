@@ -16,7 +16,7 @@ const navigationOptions = [
     {
         icon: <Home size={16} />,
         label: "Home",
-        id: "hero-section"
+        id: "top-section"
     },
     {
         icon: <BriefcaseBusiness size={16} />,

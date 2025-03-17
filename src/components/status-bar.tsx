@@ -1,34 +1,24 @@
 "use client"
 
-import { useEffect, useState } from "react";
-import { useBatteryStatus } from "react-haiku";
-import { Battery, BatteryCharging } from "lucide-react";
+import { useEffect, useState } from "react"
 
 export function StatusBar() {
-
-    const { level, isCharging } = useBatteryStatus();
-    const [currentTime, setCurrentTime] = useState<string>("");
-
-    function getBatteryColor() {
-        if (level <= 20) return "text-red-500"
-        if (level <= 50) return "text-yellow-500"
-        return "text-green-500"
-    }
+    
+    const [currentTime, setCurrentTime] = useState<string>("")
 
     function updateTime() {
         const now = new Date()
-        const options: Intl.DateTimeFormatOptions = { 
-            weekday: "short", 
-            day: "2-digit", 
-            month: "short", 
-            hour: "2-digit", 
-            minute: "2-digit", 
-            hour12: false 
+        const options: Intl.DateTimeFormatOptions = {
+            weekday: "short",
+            day: "2-digit",
+            month: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
         }
         const formattedTime = now.toLocaleString("en-GB", options).replace(",", "")
         setCurrentTime(formattedTime)
     }
-
 
     useEffect(() => {
         updateTime()
@@ -38,19 +28,14 @@ export function StatusBar() {
 
     return (
         <div className="flex sm:flex-col flex-row justify-start sm:items-start items-center gap-2">
-            <div className="flex items-center gap-1 text-muted-foreground">
-                {isCharging ? (
-                    <BatteryCharging size={24} className={`${getBatteryColor()}`} />
-                ) : (
-                    <Battery size={24} className={`${getBatteryColor()}`} />
-                )}
-                <span className="text-xs font-medium">
-                    {Math.round(level)}%
+            <div className="flex items-center gap-2 text-muted-foreground">
+                <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
+                <span className="text-xs font-medium">Open to work</span>
             </div>
-            <span className="font-medium text-xs text-muted-foreground">
-                {currentTime}
-            </span>
+            <span className="font-medium text-xs text-muted-foreground">{currentTime}</span>
         </div>
     )
 }

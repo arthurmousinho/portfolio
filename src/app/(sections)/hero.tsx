@@ -38,19 +38,19 @@ export function Hero() {
             <footer className="space-y-2 text-muted-foreground">
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Mail size={16} />
-                    <a href="mailto:">arthurmousinho@undefined.com</a>
+                    <a href="">arthurmousinho</a>
                 </div>
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Github size={16} />
-                    <a href="mailto:">@arthurmousinho</a>
+                    <a href="">@arthurmousinho</a>
                 </div>
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Linkedin size={16} />
-                    <a href="mailto:">arthurmousinho</a>
+                    <a href="">arthurmousinho</a>
                 </div>
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Paperclip size={16} />
-                    <a href="mailto:">Resume</a>
+                    <a href="">Resume</a>
                 </div>
             </footer>
         </section >
