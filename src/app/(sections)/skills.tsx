@@ -13,6 +13,7 @@ const frontEndTools = [
     'html',
     'css',
     'react',
+    'next',
     'angular',
     'tailwind'
 ] as Tool[]
