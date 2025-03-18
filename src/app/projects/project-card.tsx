@@ -1,9 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BriefcaseBusiness, GraduationCap } from "lucide-react"
 import { ToolBadge, type Tool } from "@/components/tool-badge"
-import { Safari } from "@/components/magicui/safari"
 
-type ProjectCategory = "work" | "study"
+type ProjectCategory = "work" | "study";
 
 export function ProjectCategory({ category }: { category: ProjectCategory }) {
     return (
@@ -24,16 +23,22 @@ type ProjectCardProps = {
     url: string
 }
 
-export function ProjectCard({ title, description, category, imageUrl, tools, url }: ProjectCardProps) {
+export function ProjectCard({
+    title,
+    description,
+    category,
+    imageUrl,
+    tools,
+    url
+}: ProjectCardProps) {
     return (
         <a href={url} target="_blank" rel="noreferrer">
             <Card className="p-0 flex flex-col sm:flex-row gap-0 hover:shadow-lg transition-all duration-300">
-                <CardHeader className="p-0 m-0 min-w-[40%] sm:max-w-[40%] h-full max-w-full">
-                    <Safari
-                        imageSrc={imageUrl}
-                        className="w-full h-full object-fill"
-                        url={url}
-                    />
+                <CardHeader className="p-0 m-0 min-w-[40%] sm:max-w-[40%] min-h-full max-w-full">
+                    <img
+                        src={imageUrl}
+                        className="w-full h-full object-contain sm:rounded-l-lg sm:rounded-t-none rounded-t-lg"
+                    /> 
                 </CardHeader>
                 <CardContent className="flex flex-col gap-3 justify-between p-4">
                     <div className="space-y-3">

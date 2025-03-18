@@ -36,6 +36,7 @@ const otherTools = [
     'vercel',
     'docker',
     'firebase',
+    'git',
 ] as Tool[]
 
 export function Skills() {

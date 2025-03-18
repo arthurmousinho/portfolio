@@ -27,7 +27,7 @@ type Tech =
 
 type Category = 'work' | 'study';
 
-type Project = {
+export type Project = {
     id: string;
     title: string;
     url: string;
