@@ -29,6 +29,7 @@ export default async function ProjectsPage() {
                     <ProjectCard
                         key={project.id}
                         title={project.title}
+                        backgroundColor={project.backgroundColor.hex}
                         description={project.description}
                         category={project.category}
                         imageUrl={project.image.url}

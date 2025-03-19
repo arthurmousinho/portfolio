@@ -37,6 +37,9 @@ export type Project = {
     };
     techs: Tech[];
     category: Category;
+    backgroundColor: {
+        hex: string;
+    }
 }
 
 interface GetProjectsResponse {
@@ -54,7 +57,10 @@ const GET_PROJECTS_QUERY = gql`
                 url
             }
             techs,
-            category
+            category,
+            backgroundColor {
+                hex
+            }
         }
     }
 `

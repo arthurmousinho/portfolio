@@ -22,7 +22,10 @@ const GET_PROJECTS_QUERY = gql`
                 url
             }
             techs,
-            category
+            category,
+            backgroundColor {
+                hex
+            }
         }
     }
 `
