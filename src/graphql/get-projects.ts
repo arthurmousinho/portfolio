@@ -27,7 +27,7 @@ type Tech =
 
 type Category = 'work' | 'study';
 
-type Project = {
+export type Project = {
     id: string;
     title: string;
     url: string;
@@ -37,6 +37,9 @@ type Project = {
     };
     techs: Tech[];
     category: Category;
+    backgroundColor: {
+        hex: string;
+    }
 }
 
 interface GetProjectsResponse {
@@ -54,7 +57,10 @@ const GET_PROJECTS_QUERY = gql`
                 url
             }
             techs,
-            category
+            category,
+            backgroundColor {
+                hex
+            }
         }
     }
 `

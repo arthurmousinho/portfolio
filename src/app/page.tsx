@@ -2,7 +2,7 @@ import { Experiences } from "@/app/(sections)/experiences";
 import { Hero } from "@/app/(sections)/hero";
 import { Skills } from "@/app/(sections)/skills";
 import { Projects } from "./(sections)/projects";
-import { Education } from "./(sections)/education";
+import { Education } from "./(sections)/education"
 import { Contact } from "./(sections)/contact";
 import { Navbar } from "@/components/nav-bar";
 
@@ -21,7 +21,6 @@ export default function Home() {
       <Experiences />
       <Projects />
       <Education />
-      <Contact />
     </div>
   )
 }

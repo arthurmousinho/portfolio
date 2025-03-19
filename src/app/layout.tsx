@@ -5,7 +5,6 @@ import { Providers } from "./providers";
 import { DottedBackground } from "@/components/dotted-background";
 import { BottomBlur } from "@/components/bottom-blur";
 import { Footer } from "./(sections)/footer";
-import { UnderMaintainence } from "@/components/under-maintainence";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +36,8 @@ export default function RootLayout({
       >
         <Providers>
           <DottedBackground />
-          <UnderMaintainence />
-          {/* {children}
-          <Footer /> */}
+          {children}
+          <Footer />
         </Providers>
         <BottomBlur />
       </body>

@@ -1,13 +1,13 @@
 import { ProjectCard } from "../projects/project-card";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { Button } from "@/components/ui/button";
-import { getProjects } from "@/graphql/get-projects";
+import { getTopProjects } from "@/graphql/get-top-projects";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export async function Projects() {
 
-    const { data } = await getProjects();
+    const { data } = await getTopProjects();
 
     return (
         <SectionWrapper title="Projects" id="projects-section">
@@ -16,6 +16,7 @@ export async function Projects() {
                     <ProjectCard
                         key={project.id}
                         title={project.title}
+                        backgroundColor={project.backgroundColor.hex}
                         description={project.description}
                         category={project.category}
                         imageUrl={project.image.url}

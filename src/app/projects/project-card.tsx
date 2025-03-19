@@ -1,9 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BriefcaseBusiness, GraduationCap } from "lucide-react"
 import { ToolBadge, type Tool } from "@/components/tool-badge"
-import { Safari } from "@/components/magicui/safari"
+import Image from "next/image";
 
-type ProjectCategory = "work" | "study"
+type ProjectCategory = "work" | "study";
 
 export function ProjectCategory({ category }: { category: ProjectCategory }) {
     return (
@@ -19,20 +19,36 @@ type ProjectCardProps = {
     title: string
     description: string
     category: ProjectCategory
+    backgroundColor: string
     imageUrl: string
     tools: Tool[]
     url: string
 }
 
-export function ProjectCard({ title, description, category, imageUrl, tools, url }: ProjectCardProps) {
+export async function ProjectCard({
+    title,
+    description,
+    category,
+    imageUrl,
+    tools,
+    backgroundColor,
+    url
+}: ProjectCardProps) {
+
     return (
         <a href={url} target="_blank" rel="noreferrer">
             <Card className="p-0 flex flex-col sm:flex-row gap-0 hover:shadow-lg transition-all duration-300">
-                <CardHeader className="p-0 m-0 min-w-[40%] sm:max-w-[40%] h-full max-w-full">
-                    <Safari
-                        imageSrc={imageUrl}
-                        className="w-full h-full object-fill"
-                        url={url}
+                <CardHeader 
+                    className="m-0 min-w-[40%] sm:max-w-[40%] min-h-full max-w-full p-4 
+                    sm:rounded-l-lg sm:rounded-t-none rounded-t-lg rounded-bl-none"
+                    style={{ backgroundColor }}
+                >
+                    <Image
+                        src={imageUrl}
+                        width={500}
+                        height={500}
+                        alt={title}
+                        className="w-full h-full object-fill rounded-md shadow-xl"
                     />
                 </CardHeader>
                 <CardContent className="flex flex-col gap-3 justify-between p-4">

@@ -17,9 +17,9 @@ interface TimelineListProps {
 
 export function TimelineList({ items }: TimelineListProps) {
     return (
-        <ul className="list-disc ms-6 mt-3 space-y-1.5">
+        <ul className="list-disc ms-3 mt-3 space-y-1.5">
             {items.map((item, index) => (
-                <li key={index} className="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                <li key={index} className="ps-1 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">
                     {item}
                 </li>
             ))}
@@ -55,7 +55,7 @@ export function TimelineItem({
 
                 <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">{title}</p>
 
-                {description && <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">{description}</p>}
+                {description && <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed">{description}</p>}
 
                 {children}
             </div>

@@ -128,7 +128,8 @@ const iconMap = {
     }
 };
 
-export type Tool = 'javascript'
+export type Tool = 
+    'javascript'
     | 'typescript'
     | 'python'
     | 'java'
@@ -150,6 +151,7 @@ export type Tool = 'javascript'
     | 'jest'
     | 'vercel'
     | 'firebase'
+    | 'git'
 ;
 
 export function ToolBadge({ tool }: { tool: Tool }) {

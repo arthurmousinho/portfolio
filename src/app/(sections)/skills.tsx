@@ -13,6 +13,7 @@ const frontEndTools = [
     'html',
     'css',
     'react',
+    'next',
     'angular',
     'tailwind'
 ] as Tool[]
@@ -35,6 +36,7 @@ const otherTools = [
     'vercel',
     'docker',
     'firebase',
+    'git',
 ] as Tool[]
 
 export function Skills() {

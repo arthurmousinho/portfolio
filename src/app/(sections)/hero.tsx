@@ -1,7 +1,7 @@
 import { StatusBar } from "@/components/status-bar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Mail, Paperclip } from "lucide-react";
+import { Github, Linkedin, Paperclip } from "lucide-react";
 
 export function Hero() {
     return (
@@ -29,24 +29,24 @@ export function Hero() {
             <Separator orientation="horizontal" />
             <main className="space-y-2">
                 <p className="text-base leading-relaxed text-gray-600 dark:text-neutral-400">
-                    I am dedicated to crafting impactful, high-quality solutions that seamlessly combine technical precision with a strong understanding of both user needs and business goals.
+                    As a software developer, I am dedicated to build efficient and scalable solutions that seamlessly blend technical precision, user experience, and business objectives.
                 </p>
                 <p className="text-base leading-relaxed text-gray-600 dark:text-neutral-400">
-                    I am driven by a proactive and adaptable approach, thriving in fast-paced environments where clear communication and collaboration are essential.
+                    I'm passionate about solving complex challenges, quickly adapting to new technologies, and collaborating strategically to deliver high-impact products.
                 </p>
             </main>
             <footer className="space-y-2 text-muted-foreground">
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
-                    <Mail size={16} />
-                    <a href="">arthurmousinho</a>
-                </div>
-                <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Github size={16} />
-                    <a href="">@arthurmousinho</a>
+                    <a href="https://github.com/arthurmousinho" target="_blank">
+                        github.com/arthurmousinho
+                    </a>
                 </div>
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Linkedin size={16} />
-                    <a href="">arthurmousinho</a>
+                    <a href="https://www.linkedin.com/in/arthurmousinho/" target="_blank">
+                        linkedin.com/in/arthurmousinho
+                    </a>
                 </div>
                 <div className="flex flex-row gap-3 items-center text-sm hover:text-blue-500 hover:underline hover:underline-offset-4">
                     <Paperclip size={16} />

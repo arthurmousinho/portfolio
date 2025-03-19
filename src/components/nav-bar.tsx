@@ -10,7 +10,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { scrollToSection } from "@/helpers/scroll-to-section";
-import { BriefcaseBusiness, Code, GraduationCap, Home, Send } from "lucide-react";
+import { BriefcaseBusiness, Code, Github, GraduationCap, Home, Linkedin, Send } from "lucide-react";
 
 const navigationOptions = [
     {
@@ -41,6 +41,19 @@ const navigationOptions = [
     }
 ];
 
+const socialOptions = [
+    {
+        icon: <Linkedin size={16} />,
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/arthurmousinho/"
+    },
+    {
+        icon: <Github size={16} />,
+        label: "GitHub",
+        href: "https://github.com/arthurmousinho"
+    }
+]
+
 export function Navbar() {
     return (
         <div className="my-auto flex h-auto max-w-14">
@@ -50,6 +63,21 @@ export function Navbar() {
             >
                 {navigationOptions.map((option, index) => (
                     <DockIcon key={index} onClick={() => scrollToSection(option.id)}>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Button variant="ghost" type="button" size="icon">
+                                    {option.icon}
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent side="right">
+                                <p>{option.label}</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </DockIcon>
+                ))}
+                <Separator orientation="horizontal" className="w-full px-2" />
+                {socialOptions.map((option, index) => (
+                    <DockIcon key={index} onClick={() => window.open(option.href, "_blank")}>
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Button variant="ghost" type="button" size="icon">
